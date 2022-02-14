@@ -1,0 +1,17 @@
+.holder_container {
+    color: #2b2b2b;
+    padding-bottom: 5vh;
+}
+.holder_header {
+    padding-bottom: 3vh;
+}
+.holder_header h1, .holder_header h2 {
+    text-transform: uppercase;
+    font-family: Roboto;
+}
+.holder_header h1 {
+    font-size: 60px;
+}
+.holder_header h2 {
+    font-size: 45px;
+}

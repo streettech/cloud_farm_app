@@ -4,12 +4,21 @@ import { Component, OnInit } from '@angular/core';
   selector: '[app-test]',
   template: `
   <div>
-    <p>test works!</p>
+    <p>by {{name}}</p>
   </div>
+  <input [disabled]="isDisabled" [id]="myId" type="text" value="Enter Name">
   `,
   styles: []
 })
 export class TestComponent implements OnInit {
+
+  public name = "Frank Mukete";
+  public myId = "testId";
+  public isDisabled = false;
+  public testing = {
+    "test1": this.isDisabled,
+    "test2": !this.isDisabled
+  };
 
   constructor() { }
 
