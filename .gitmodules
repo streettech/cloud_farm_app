@@ -1,3 +1,0 @@
-[submodule "subdirectory1/cloud_farm_application"]
-	path = subdirectory1/cloud_farm_application
-	url = https://github.com/streettech/cloud_farm_app.git
