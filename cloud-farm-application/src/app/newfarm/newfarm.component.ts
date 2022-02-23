@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewfarmComponent implements OnInit {
 
+  public message_about_farm = "Deploying a new farm is always fun. You should do it more often!"
+
   constructor() { }
 
   ngOnInit(): void {
