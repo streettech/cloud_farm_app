@@ -10,6 +10,7 @@ import { NewfarmComponent } from './newfarm/newfarm.component';
 import { SpecComponent } from './spec/spec.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { MessagingComponent } from './messaging/messaging.component';
+import { FarmIndiComponent } from './farm-indi/farm-indi.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'farms_indi', component: FarmsIndiComponent},
   {path: 'documentation', component: DocumentationComponent},
   {path: 'spec', component: SpecComponent},
-  {path: 'messaging', component: MessagingComponent}
+  {path: 'messaging', component: MessagingComponent},
+  {path: 'farm-indi', component: FarmIndiComponent}
 ];
 
 @NgModule({
@@ -34,5 +36,5 @@ export const routingComponents = [
   HomeComponent, AboutComponent, HubComponent, 
   FarmComponent, NewfarmComponent, LabComponent, 
   SpecComponent, FarmsIndiComponent, DocumentationComponent,
-  MessagingComponent
+  MessagingComponent, FarmIndiComponent
 ]

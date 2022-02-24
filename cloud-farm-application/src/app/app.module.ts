@@ -18,6 +18,7 @@ import { FarmMainService } from './farm-main.service';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { DummyComponent } from './dummy/dummy.component';
 import { MessagingComponent } from './messaging/messaging.component';
+import { FarmIndiComponent } from './farm-indi/farm-indi.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MessagingComponent } from './messaging/messaging.component';
     DocumentationComponent,
     DummyComponent,
     MessagingComponent,
+    FarmIndiComponent,
   ],
   imports: [
     BrowserModule,

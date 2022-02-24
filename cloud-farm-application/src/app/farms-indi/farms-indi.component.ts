@@ -15,5 +15,4 @@ export class FarmsIndiComponent implements OnInit {
   ngOnInit(): void {
     this.farms = this._farmService.getFarmsInfo();
   }
-
 }
