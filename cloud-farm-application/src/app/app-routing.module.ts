@@ -8,6 +8,8 @@ import { HubComponent } from './hub/hub.component';
 import { LabComponent } from './lab/lab.component';
 import { NewfarmComponent } from './newfarm/newfarm.component';
 import { SpecComponent } from './spec/spec.component';
+import { DocumentationComponent } from './documentation/documentation.component';
+import { MessagingComponent } from './messaging/messaging.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -17,7 +19,10 @@ const routes: Routes = [
   {path: 'newfarm', component: NewfarmComponent},
   {path: 'lab', component: LabComponent},
   {path: 'spec', component: SpecComponent},
-  {path: 'farms_indi', component: FarmsIndiComponent}
+  {path: 'farms_indi', component: FarmsIndiComponent},
+  {path: 'documentation', component: DocumentationComponent},
+  {path: 'spec', component: SpecComponent},
+  {path: 'messaging', component: MessagingComponent}
 ];
 
 @NgModule({
@@ -25,4 +30,9 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, HubComponent, FarmComponent, NewfarmComponent, LabComponent, SpecComponent, FarmsIndiComponent]
+export const routingComponents = [
+  HomeComponent, AboutComponent, HubComponent, 
+  FarmComponent, NewfarmComponent, LabComponent, 
+  SpecComponent, FarmsIndiComponent, DocumentationComponent,
+  MessagingComponent
+]

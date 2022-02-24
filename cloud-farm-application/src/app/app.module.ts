@@ -15,6 +15,9 @@ import { LabComponent } from './lab/lab.component';
 import { SpecComponent } from './spec/spec.component';
 import { FarmsIndiComponent } from './farms-indi/farms-indi.component';
 import { FarmMainService } from './farm-main.service';
+import { DocumentationComponent } from './documentation/documentation.component';
+import { DummyComponent } from './dummy/dummy.component';
+import { MessagingComponent } from './messaging/messaging.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { FarmMainService } from './farm-main.service';
     LabComponent,
     SpecComponent,
     FarmsIndiComponent,
+    DocumentationComponent,
+    DummyComponent,
+    MessagingComponent,
   ],
   imports: [
     BrowserModule,
