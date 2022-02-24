@@ -45,3 +45,21 @@ a:hover {
     /* Add some padding inside the card container */
     padding: 2px 16px;
 }
+._button {
+    background-color: #2b2b2b;
+    width: 300px;
+    height: 100px;
+    position: relative;
+    margin: 10px auto 10px auto;
+}
+._button p, ._button div, ._button h1, ._button h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+._button:hover {
+    background-color: #5dfb4b;
+}
