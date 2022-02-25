@@ -6,28 +6,43 @@
         </div>
         <div class="holder_text">
             <p class="explainer_text">
-                This is a better explanation of what this project is...
+                A better explanation of what this project is...
             </p>
         </div>
     </div>
-    <div class="info_blocks">
-        <!--put cards here-->
-        <div class="info_block_row">
-            <div class="card" class="about_card">
-                <div class="card_container">
-                    <p>Hello World!</p>
+    <div class="container">
+        <section>
+            <h2>
+                About Project
+            </h2>
+            <div class="_dialog">
+                <div class="dialog_box">
+                    <p class="explainer_text">{{project_explainer_log}}</p>
                 </div>
             </div>
-            <div class="card" class="about_card">
-                <div class="card_container">
-                    <p>Hello Planet!</p>
+        </section>
+        <section>
+            <h2>
+                About Developer
+            </h2>
+            <div class="dialog_box">
+                {{developer_explainer_log}}
+            </div>
+        </section>
+        <section>
+            <h2>
+                Contact
+            </h2>
+            <div class="dialog_box">
+                <div class="square_bubble">
+                    <h3>{{dev_name}}</h3>
+                    <p>
+                        Email: {{dev_email}}<br>
+                        phone: {{dev_phone}}<br>
+                        LinkedIn: {{dev_linkedIn}}
+                    </p>
                 </div>
             </div>
-            <div class="card" class="about_card">
-                <div class="card_container">
-                    <p>Hello Earth!</p>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 </div>
