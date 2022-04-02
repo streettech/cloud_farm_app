@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public site = "www.cloudfarm.dev";
+  test : Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {

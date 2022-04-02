@@ -1,6 +1,6 @@
 {
-    "host": "localhost",
-    "user": "root",
-    "database": "cf_user",
+    "host": "18.191.21.189",
+    "user": "dexter",
+    "database": "posts",
     "password": "77749289nk"
 }
