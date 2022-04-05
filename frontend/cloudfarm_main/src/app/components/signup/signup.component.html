@@ -8,16 +8,48 @@
                 <form class="form-signup form-styling" [formGroup]="signupForm" (ngSubmit)="signup()" novalidate>
                     <h1 class="h3 mb-3 pb-4 font-weight-normal" style="text-align: center">Sign up</h1>
                     <div class="mb-3">
-                        <input type="text" formControlName="name" class="form-control" id="input_name" placeholder="Full Name" autofocus="">
+                        <input type="text" formControlName="first_name" class="form-control" id="input_first_name" placeholder="First Name" autofocus="">
                     </div>
                     <div class="mb-3">
-                        <input type="email" formControlName="email" class="form-control" id="input_email" placeholder="Email Address" autofocus="">
+                        <input type="text" formControlName="last_name" class="form-control" id="input_last_name" placeholder="Last Name" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" formControlName="email_address" class="form-control" id="input_email" placeholder="Email Address" autofocus="">
                     </div>
                     <div class="mb-3">
                         <input type="password" formControlName="password" class="form-control" id="input_password" placeholder="Password" autofocus="">
                     </div>
                     <div class="mb-3">
                         <input type="password" formControlName="re_password" class="form-control" id="input_re_password" placeholder="Repeat Password" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="control-label" for="input_birth_date">Date of Birth</label>
+                        <input type="date" formControlName="birth_date" class="form-control" id="input_birth_date" name="input_birth_date" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="control-label" for="input_phone_number">Phone Number</label>
+                        <input type="tel" formControlName="phone_number" class="form-control" id="input_phone_number" name="input_phone_number" placeholder="ddd-ddd-dddd" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="physical_address" class="form-control" id="input_physical_address" placeholder="Address" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="city" class="form-control" id="input_city" placeholder="City" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="state" class="form-control" id="input_state" placeholder="State" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="country" class="form-control" id="input_country" placeholder="Country" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="user_status" class="form-label">Used our app before? How much do you know?</label>
+                        <input class="form-control" list="user_statusOption" id="user_status" formControlName="user_status" placeholder="beginner?">
+                        <datalist id="user_statusOption">
+                            <option value="beginner">
+                            <option value="intermidiate">
+                            <option value="advance">
+                        </datalist>
                     </div>
                     <div class="mb-3 mt-5">
                         <button class="btn btn-outline-success btn-block" [disabled]="!signupForm.valid" type="submit">Sign up</button>

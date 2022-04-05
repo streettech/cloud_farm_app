@@ -2,9 +2,11 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
-const authRoutes = require('./routes/auth')
+const authRoutes = require('./routes/auth');
 
-const errorController = require('./controllers/error')
+const farmRoutes = require('./routes/farm');
+
+const errorController = require('./controllers/error');
 
 const app = express();
 
@@ -20,6 +22,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/auth', authRoutes);
+
+app.use('/farm', farmRoutes);
 
 app.use(errorController.get404);
 

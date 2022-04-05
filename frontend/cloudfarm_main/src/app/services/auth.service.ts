@@ -17,7 +17,7 @@ export class AuthService {
 
   isUserLoggedIn$ = new BehaviorSubject<boolean>(false);
 
-  userId!: Pick<User, 'id'>;
+  userId!: Pick<User, 'user_id'>;
 
   httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json'})
@@ -29,7 +29,7 @@ export class AuthService {
     private router: Router
     ) { }
 
-  signup(user: Omit<User, 'id'>): Observable<User> {
+  signup(user: Omit<User, 'user_id'>): Observable<User> {
     return this.http.post<User>(`${this.url}/signup`, user, this.httpOptions).pipe(
       first(),
       catchError(this.errorHandlerService.handleError<User>('signup'))
@@ -37,14 +37,14 @@ export class AuthService {
   }
 
   login(
-    email: Pick<User, 'email'>, 
+    email_address: Pick<User, 'email_address'>, 
     password: Pick<User, 'password'>
   ): Observable<{
     token: string; 
-    userId: Pick<User, 'id'>;
+    userId: Pick<User, 'user_id'>;
   }> {
     return this.http
-    .post(`${this.url}/login`, { email, password }, this.httpOptions)
+    .post(`${this.url}/login`, { email_address, password }, this.httpOptions)
     .pipe(
       first(),
       tap((tokenObject: any) => {                       // { token: string; userId: Pick<User, 'id'> }
@@ -54,7 +54,7 @@ export class AuthService {
         this.router.navigate(['hub']);
       }),
       catchError(this.errorHandlerService.handleError<{
-        token: string; userId: Pick<User, 'id'>
+        token: string; userId: Pick<User, 'user_id'>
       }>('login'))
     );
   }

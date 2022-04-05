@@ -11,17 +11,33 @@ exports.signup = async (req, res, next) => {
 
     if (!errors.isEmpty()) return
 
-    const name = req.body.name;
-    const email = req.body.email;
+    const first_name = req.body.first_name;
+    const last_name = req.body.last_name;
+    const birth_date = req.body.birth_date;
+    const phone_number = req.body.phone_number;
+    const email_address = req.body.email_address;
     const password = req.body.password;
+    const physical_address = req.body.physical_address;
+    const city = req.body.city;
+    const state = req.body.state;
+    const country = req.body.country;
+    const user_status = req.body.user_status;
 
     try {
         const hashedPassword = await bcrypt.hash(password, 12);
 
         const userDetails = {
-            name: name,
-            email: email,
-            password: hashedPassword
+            first_name: first_name,
+            last_name: last_name,
+            birth_date: birth_date,
+            phone_number: phone_number,
+            email_address: email_address,
+            password: hashedPassword,
+            physical_address: physical_address,
+            city: city,
+            state: state,
+            country: country,
+            user_status: user_status
         };
 
         const result = await User.save(userDetails);
@@ -37,12 +53,12 @@ exports.signup = async (req, res, next) => {
 
 exports.login = async (req, res, next) => {
 
-    const email = req.body.email;
+    const email_address = req.body.email_address;
 
     const password = req.body.password;
 
     try {
-        const user = await User.find(email);
+        const user = await User.find(email_address);
 
         if (user[0].length !== 1) {
             const error = new Error('The user with this email could not be found.');
@@ -61,14 +77,14 @@ exports.login = async (req, res, next) => {
         }
 
         const token = jwt.sign({
-            email: storedUser.email,
-            userId: storedUser.id
+            email_address: storedUser.email_address,
+            userId: storedUser.user_id
         },
         'secretfortoken',
         { expiresIn: '1h' }
         );
 
-        res.status(200).json({ token: token, userId: storedUser.id });
+        res.status(200).json({ token: token, userId: storedUser.user_id });
 
     } catch (err) {
         if (!err.statusCode) {
