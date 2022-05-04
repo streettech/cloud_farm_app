@@ -12,4 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  newfarmClick(): void {
+    console.log(window.location.href);
+    window.location.href = 'http://localhost:51174/newfarm';
+  }
+
+
 }

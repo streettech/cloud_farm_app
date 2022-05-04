@@ -1,0 +1,35 @@
+<div class="bg-sign fluid-container">
+    <div class="card sign-card">
+        <div class="wrapper card-body">
+            <div class="container-fluid text-center" id="formContent">
+                <form class="form-signup form-styling" [formGroup]="newFarmForm" #formDirective="ngForm" (ngSubmit)="register(newFarmForm.value)" novalidate>
+                    <h1 class="h3 mb-3 pb-4 font-weight-normal" style="text-align: center">Add a New Farm</h1>
+                    <div class="mb-3">
+                        <input type="text" formControlName="name" class="form-control" id="input_name" placeholder="Farm Name" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="ip" class="form-control" id="input_ip" placeholder="Farm IP Address" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="physical_address" class="form-control" id="input_physical_address" placeholder="Farm Address" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="city" class="form-control" id="input_city" placeholder="Farm City" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="state" class="form-control" id="input_state" placeholder="Farm State" autofocus="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formControlName="country" class="form-control" id="input_country" placeholder="What Country is Your Farm In?" autofocus="">
+                    </div>
+                    <div class="mb-3 mt-5">
+                        <button class="btn btn-outline-success btn-block" [disabled]="!newFarmForm.valid" type="submit">Add Farm</button>
+                    </div>
+                    <div class="text-button">
+                        <a routerLink="/farms" href="#">back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>

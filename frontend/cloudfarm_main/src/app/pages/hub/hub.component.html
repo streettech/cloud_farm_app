@@ -12,8 +12,8 @@
         </div>
     </header>
     <div class="fluid-container">
-        <div class="row mb-3">
-            <button type="button" class="btn btn-primary mybutton">My Farms</button>
+        <div class="row mb-3"> <!--[hidden]="!isLoggedIn()">-->
+            <button type="button" class="btn btn-primary mybutton" (click)="farmClick()">My Farms</button>
         </div>
         <div class="row my-3">
             <button type="button" class="btn btn-primary mybutton">Connect</button>

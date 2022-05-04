@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div class="icon-big btn btn-outline-success" routerLink="/farms">
+                <i class="nc-icon nc-minimal-left text-success"></i>
+                <p class="text-success">MY FARMS</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Test Farm</h1>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="detail text-center">
+            <h2>Details</h2>
+            <hr>
+            <ul>
+                <li>Temperature: {{sensors.temperature}} &#xb0;Celsius</li>
+                <li>Water Level: {{sensors.water}} %</li>
+                <li>Humidity: {{sensors.humidity}} RH</li>
+            </ul>
+        </div>
+        <div class="row btn btn-outline-light" routerLink="/lab">
+            <i class="nc-icon nc-atom text-light"></i>
+            <p class="text-light">lab</p>
+        </div>
+    </div>
+</div>

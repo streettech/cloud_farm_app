@@ -33,7 +33,19 @@ module.exports = class User {
 
     static save(user) {
         return db.execute(
-            'INSERT INTO users (first_name, last_name, birth_date, phone_number, email_address, password, physical_address, city, state, country, user_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 
+            'INSERT INTO users (\
+                first_name, \
+                last_name, \
+                birth_date, \
+                phone_number, \
+                email_address, \
+                password, \
+                physical_address, \
+                city, \
+                state, \
+                country, \
+                user_status\
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 
             [
                 user.first_name, 
                 user.last_name, 

@@ -1,0 +1,30 @@
+.center-all {
+    margin-left: auto;
+    margin-right: auto;
+}
+.under-text {
+    color: rgba(0, 0, 0, 0.3);
+}
+.my-btn-anim {
+    animation: bouncy 5s infinite linear;
+    transition: all 0.2s;
+}
+.my-button {
+    max-width: 300px;
+}
+.my-button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 237, 195, 0.2);
+}
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}
+.my-container {
+    padding: 0;
+}

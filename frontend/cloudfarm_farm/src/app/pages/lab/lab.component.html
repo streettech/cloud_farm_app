@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div class="icon-big btn btn-outline-success" routerLink="/farm">
+                <i class="nc-icon nc-minimal-left text-success"></i>
+                <p class="text-success">Test Farm</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Test Farm Lab</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form [formGroup]="valveForm" (ngSubmit)="sendData()" novalidate>
+            <div class="mb-3 row">
+                <label for="water_percent" class="form-label col align-self-start">Keep water at: </label>
+                <input type="number" class="form-control col align-self-end" id="water_percent" formControlName="water_percent">
+            </div>
+            <div class="mb-3">
+                <label class="form-check-label" for="water_toggle">Water Switch:</label>
+                <div class="toggle-button-cover">
+                    <div class="button-cover">
+                      <div class="button r toggles" id="water_toggle">
+                        <input type="checkbox" class="checkbox" formControlName="water_toggle">
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-check-label" for="light_toggle">Light Switch:</label>
+                <div class="toggle-button-cover">
+                    <div class="button-cover">
+                      <div class="button r toggles" id="light_toggle">
+                        <input type="checkbox" class="checkbox" formControlName="light_toggle">
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 mt-5">
+                <button class="btn btn-outline-success btn-block" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

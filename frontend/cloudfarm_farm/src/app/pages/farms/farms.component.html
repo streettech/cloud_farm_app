@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats my-button my-btn-anim" routerLink="/newfarm">
+            <div class="card-body">
+                <div class="col-5 col-md-4 center-all">
+                    <div class="icon-big text-center icon-warning">
+                        <i class="nc-icon nc-simple-add text-success"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <div class="text-center">
+                    <p class="under-text">Add Farm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid my-container">
+    <hr>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats my-button" routerLink="/farm">
+            <div class="card-body">
+                <div class="col-5 col-md-4 center-all">
+                    <div class="icon-big text-center">
+                        <i class="nc-icon nc-app text-success"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <div class="text-center">
+                    <p class="under-text">Test Farm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="container-fluid my-container">
+    <hr>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div *ngFor="let farm of farms$ | async" class="card card-stats my-button" routerLink="/newfarm">
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <div class="numbers text-center">
+                          <p class="card-category mb-2">{{farm.ip}}</p>
+                          <p class="card-title mb-1">{{farm.name}}
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <hr>
+                <div class="text-center">
+                    <p class="under-text">{{farm.farm_status}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->

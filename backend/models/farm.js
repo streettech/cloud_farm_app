@@ -27,7 +27,16 @@ module.exports = class Farm {
 
     static save(farm) {
         return db.execute(
-            'INSERT INTO farms (user_id, name, ip, physical_address, city, state, country, farm_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', 
+            'INSERT INTO farms ( \
+                user_id, \
+                name, \
+                ip, \
+                physical_address, \
+                city, \
+                state, \
+                country, \
+                farm_status\
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', 
             [
                 farm.user_id,
                 farm.name,

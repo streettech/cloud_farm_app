@@ -34,7 +34,7 @@ export class SignupComponent implements OnInit {
       user_status: new FormControl("", [Validators.required])
     }, {
       validators: this.checkPasswords
-    })
+    });
   }
 
   checkPasswords: ValidatorFn = (group: AbstractControl): ValidationErrors | null => {
